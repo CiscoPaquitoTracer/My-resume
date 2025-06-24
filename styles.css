@@ -1,0 +1,106 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6fb;
+    color: #222;
+    line-height: 1.6;
+    padding: 40px 0;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    padding: 40px 32px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #2a4d69;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #4f5d75;
+    font-size: 1.1rem;
+}
+
+/* Section titles */
+section h2 {
+    color: #3867d6;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #e1e8ed;
+    padding-bottom: 4px;
+    margin-top: 32px;
+}
+
+/* Lists */
+ul {
+    list-style: disc inside;
+    margin-left: 16px;
+    margin-bottom: 16px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* Experience/Education blocks */
+.experience, .education {
+    margin-bottom: 24px;
+}
+
+.job-title, .degree {
+    font-weight: bold;
+    color: #22223b;
+}
+
+.company, .school {
+    color: #4f5d75;
+    font-size: 0.98rem;
+}
+
+/* Skills tags */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: #eaf0fb;
+    color: #3867d6;
+    border-radius: 16px;
+    padding: 4px 14px;
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 8px;
+    }
+    header h1 {
+        font-size: 1.6rem;
+    }
+    section h2 {
+        font-size: 1.1rem;
+    }
+}
