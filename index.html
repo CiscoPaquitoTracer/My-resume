@@ -1,133 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Francisco Cereth Alarcon</title>
+    <title>Francisco Cereth Alarcón | Desarrollador</title>
     <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     
-    <header>
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center py-3">
-                <img id="logo" src="./IMG/download.png" alt="Logo personal" class="img-fluid" style="max-width: 100px;">
-                <nav>
-                    <ul class="nav">
-                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#sobreMi">Sobre mí</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-                    </ul>
-                </nav>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo-container">
+                    <img id="logo" src="./IMG/download.png" alt="Logo personal" class="logo-img">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#sobreMi" class="nav-link">Sobre mí</a></li>
+                    <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                    <li><a href="#galeria" class="nav-link">Galería</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
             </div>
-        </div>
+        </nav>
     </header>
 
-    
-    <section id="sobreMi" class="container py-5">
-        <h2>Sobre mí</h2>
-        <p>Soy un estudiante apasionado por los videojuegos y sigo en proceso de aprendizaje.</p>
-        <h3>Hobbies e intereses:</h3>
-        <ul>
-            <li>Jugar videojuegos y mi favorito es Devil May Cry 5.</li>
-            <li>Ver películas.</li>
-            <li>Aprender nuevas tecnologías.</li>
-        </ul>
-    </section>
-
-    <section id="proyectos" class="container py-5">
-        <h2>Proyectos</h2>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Nombre del proyecto</th>
-                    <th>Descripción</th>
-                    <th>Tecnología utilizada</th>
-                    <th>Enlace</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Sistema Gestor de Almacén Nova</td>
-                    <td>Sistema para gestionar entradas y salidas de productos en una papelería.</td>
-                    <td>Java, MySQL</td>
-                    <td><a href="https://github.com/LennyRocha/SGA" class="btn btn-primary btn-sm">SGA</a></td>
-                </tr>
-                <tr>
-                    <td>Sistema de Gestión de Lockers</td>
-                    <td>Plataforma para administrar pedidos de lockers.</td>
-                    <td>Kotlin, Android Studio</td>
-                    <td><a href="#" class="btn btn-primary btn-sm">Pendiente</a></td>
-                </tr>
-                <tr>
-                    <td>API para Gestión de Bibliotecas</td>
-                    <td>API para pedidos y devoluciones en una biblioteca.</td>
-                    <td>Node.js, MySQL</td>
-                    <td><a href="https://github.com/CiscoPaquitoTracer/API_BIBLIOTECA.git" class="btn btn-primary btn-sm">Repositorio</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    
-    <section id="galeria" class="container py-5">
-        <h2>Galería</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <figure class="figure">
-                    <img src="./IMG/Almacen.png" alt="Proyecto 1" class="figure-img img-fluid rounded">
-                    <figcaption class="figure-caption text-center">SGANOVA</figcaption>
-                </figure>
-            </div>
-            <div class="col-md-4">
-                <figure class="figure">
-                    <img src="./IMG/lockers.png" alt="Proyecto 2" class="figure-img img-fluid rounded">
-                    <figcaption class="figure-caption text-center">Gestion de Lockers 2</figcaption>
-                </figure>
-            </div>
-            <div class="col-md-4">
-                <figure class="figure">
-                    <img src="./IMG/API.png" alt="Proyecto 3" class="figure-img img-fluid rounded">
-                    <figcaption class="figure-caption text-center">API BIBLIOTECA 3</figcaption>
-                </figure>
+    <section id="inicio" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Francisco Cereth Alarcón</h1>
+            <p class="hero-subtitle">Desarrollador de Software</p>
+            <p class="hero-description">Estudiante apasionado por la tecnología y el desarrollo de software</p>
+            <div class="hero-buttons">
+                <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                <a href="#contacto" class="btn btn-secondary">Contactar</a>
             </div>
         </div>
     </section>
 
     
-    <section id="contacto" class="container py-5">
-        <h2>Contacto</h2>
-        <form action="/submit" method="post">
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" class="form-control" required>
+    <section id="sobreMi" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-user"></i>
+                Sobre mí
+            </h2>
+            <div class="about-content">
+                <p class="about-text">Soy un estudiante apasionado por los videojuegos y sigo en proceso de aprendizaje constante en el mundo del desarrollo de software.</p>
+                <div class="interests-section">
+                    <h3 class="interests-title">
+                        <i class="fas fa-heart"></i>
+                        Hobbies e intereses
+                    </h3>
+                    <div class="interests-grid">
+                        <div class="interest-card">
+                            <i class="fas fa-gamepad"></i>
+                            <p>Jugar videojuegos<br><span class="highlight">Devil May Cry 5</span> es mi favorito</p>
+                        </div>
+                        <div class="interest-card">
+                            <i class="fas fa-film"></i>
+                            <p>Ver películas</p>
+                        </div>
+                        <div class="interest-card">
+                            <i class="fas fa-code"></i>
+                            <p>Aprender nuevas tecnologías</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="mb-3">
-                <label for="email" class="form-label">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" class="form-control" required>
-            </div>
-
-            <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" class="form-control" rows="5" required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+        </div>
     </section>
-    <footer class="bg-dark text-white py-3">
-        <div class="container text-center">
-            <p>&copy; 2025 Francisco Cereth Alarcon</p>
+
+    <section id="proyectos" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-laptop-code"></i>
+                Proyectos
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3 class="project-title">Sistema Gestor de Almacén Nova</h3>
+                    <p class="project-description">Sistema para gestionar entradas y salidas de productos en una papelería.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <a href="https://github.com/LennyRocha/SGA" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> Ver en GitHub
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3 class="project-title">Sistema de Gestión de Lockers</h3>
+                    <p class="project-description">Plataforma para administrar pedidos de lockers.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">Android Studio</span>
+                    </div>
+                    <a href="#" class="project-link disabled">
+                        <i class="fas fa-clock"></i> Pendiente
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="project-title">API para Gestión de Bibliotecas</h3>
+                    <p class="project-description">API para pedidos y devoluciones en una biblioteca.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <a href="https://github.com/CiscoPaquitoTracer/API_BIBLIOTECA.git" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> Ver en GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="galeria" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-images"></i>
+                Galería
+            </h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image-wrapper">
+                        <img src="./IMG/Almacen.png" alt="Sistema Gestor de Almacén Nova" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <p class="gallery-caption">SGANOVA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image-wrapper">
+                        <img src="./IMG/lockers.png" alt="Sistema de Gestión de Lockers" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <p class="gallery-caption">Gestión de Lockers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image-wrapper">
+                        <img src="./IMG/API.png" alt="API Biblioteca" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <p class="gallery-caption">API Biblioteca</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contacto" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-envelope"></i>
+                Contacto
+            </h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>¿Tienes alguna pregunta?</h3>
+                    <p>Estoy abierto a nuevas oportunidades y colaboraciones. ¡No dudes en contactarme!</p>
+                    <div class="social-links">
+                        <a href="https://github.com/CiscoPaquitoTracer" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/francisco-cereth-alarcon-581795286/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+                <form action="/submit" method="post" class="contact-form">
+                    <div class="form-group">
+                        <label for="nombre" class="form-label">
+                            <i class="fas fa-user"></i> Nombre
+                        </label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">
+                            <i class="fas fa-envelope"></i> Correo Electrónico
+                        </label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje" class="form-label">
+                            <i class="fas fa-comment"></i> Mensaje
+                        </label>
+                        <textarea id="mensaje" name="mensaje" class="form-control" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Francisco Cereth Alarcón. Todos los derechos reservados.</p>
             <div class="footer-links">
-                <a href="https://github.com/CiscoPaquitoTracer" class="text-white me-2">GitHub</a> |
-                <a href="https://www.linkedin.com/in/francisco-cereth-alarcon-581795286/" class="text-white ms-2">LinkedIn</a> |
-                <a href="#inicio" class="text-white ms-2">Inicio</a>
+                <a href="https://github.com/CiscoPaquitoTracer" target="_blank" class="footer-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/francisco-cereth-alarcon-581795286/" target="_blank" class="footer-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Smooth scroll para los enlaces del menú
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Efecto de scroll en el navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
