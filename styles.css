@@ -127,6 +127,7 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     position: relative;
     overflow: hidden;
+    margin-bottom: 0;
 }
 
 .hero-section::before {
@@ -223,6 +224,14 @@ body {
 .section {
     padding: 80px 2rem;
     position: relative;
+    margin-top: 0;
+}
+
+#sobreMi {
+    background: var(--bg-light);
+    margin-top: 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .section-dark {
@@ -266,6 +275,7 @@ body {
     padding: 3rem;
     border-radius: 20px;
     box-shadow: var(--shadow-xl);
+    margin-top: 1rem;
 }
 
 .about-text {
@@ -430,27 +440,36 @@ body {
 /* ============================================
    GALERÍA
    ============================================ */
+#galeria {
+    background: var(--bg-light);
+}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    margin-top: 2rem;
 }
 
 .gallery-item {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--bg-white);
+    padding: 0;
 }
 
 .gallery-item:hover {
     transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
 }
 
 .gallery-image-wrapper {
     position: relative;
     overflow: hidden;
     aspect-ratio: 16/9;
+    width: 100%;
 }
 
 .gallery-image {
@@ -458,6 +477,7 @@ body {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+    display: block;
 }
 
 .gallery-item:hover .gallery-image {
