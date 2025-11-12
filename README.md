@@ -1,4 +1,4 @@
-# Portfolio Personal - Francisco Cereth Alarcón
+# Portfolio Personal - Francisco Cereth Alarcon
 
 Portfolio web personal moderno y responsive que muestra mis proyectos, habilidades e información de contacto como desarrollador de software.
 
