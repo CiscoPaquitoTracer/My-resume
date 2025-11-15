@@ -136,4 +136,4 @@ Este proyecto es de uso personal. Todos los derechos reservados.
 
 ---
 
-**Desarrollado con ❤️ por Francisco Cereth Alarcon**
+**Desarrollado por Francisco Cereth Alarcon**
