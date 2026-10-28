@@ -9,7 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            // Enlaces "#" (como proyectos pendientes) no tienen destino
+            if (href === '#') {
+                return;
+            }
+            const target = document.querySelector(href);
             if (target) {
                 target.scrollIntoView({
                     behavior: 'smooth',
@@ -50,56 +55,50 @@ function handleFormSubmit(e) {
     submitButton.disabled = true;
     submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
     
-    // OPCIÓN 1: Usando EmailJS (recomendado)
-    // Primero registrate en https://www.emailjs.com/ (gratis)
-    // Luego agrega esto en tu HTML antes de </body>:
-    // <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    
-    // Configura tus credenciales de EmailJS aquí:
-    const SERVICE_ID = 'TU_SERVICE_ID'; // ⚠️ Cámbialo por tu Service ID
-    const TEMPLATE_ID = 'TU_TEMPLATE_ID'; // ⚠️ Cámbialo por tu Template ID
-    const PUBLIC_KEY = 'TU_PUBLIC_KEY'; // ⚠️ Cámbialo por tu Public Key
-    
-    // Inicializar EmailJS
-    if (typeof emailjs !== 'undefined') {
-        emailjs.init(PUBLIC_KEY);
-        
-        // Preparar los parámetros del email
-        const templateParams = {
-            from_name: nombre,
-            from_email: email,
-            message: mensaje,
-            to_email: 'fcereth@gmail.com'
-        };
-        
-        // Enviar el email
-        emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
-            .then(() => {
-                // Éxito
+    // Envío con FormSubmit (https://formsubmit.co) en modo AJAX:
+    // el mensaje se manda sin salir de la página ni abrir otra pestaña.
+    // La primera vez FormSubmit manda un correo de activación a este email.
+    const FORM_ENDPOINT = 'https://formsubmit.co/ajax/fcereth@gmail.com';
+
+    fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            nombre: nombre,
+            email: email,
+            mensaje: mensaje,
+            _subject: `Contacto desde Portfolio - ${nombre}`,
+            _replyto: email,
+            _template: 'table',
+            _captcha: 'false'
+        })
+    })
+        .then((response) => response.json().then((data) => ({ ok: response.ok, data })))
+        .then(({ ok, data }) => {
+            if (ok && String(data.success) === 'true') {
                 showMessage('success', '¡Mensaje enviado con éxito! Te responderé pronto.');
                 form.reset();
-            })
-            .catch((error) => {
-                // Error
-                console.error('Error:', error);
-                showMessage('error', 'Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.');
-            })
-            .finally(() => {
-                // Restaurar botón
-                submitButton.disabled = false;
-                submitButton.innerHTML = originalButtonText;
-                
-                // Ocultar mensaje después de 5 segundos
-                setTimeout(() => {
-                    hideMessage();
-                }, 5000);
-            });
-    } else {
-        // Si EmailJS no está cargado, usar alternativa
-        showMessage('error', 'El servicio de email no está configurado. Por favor, contacta a través de: fcereth@gmail.com');
-        submitButton.disabled = false;
-        submitButton.innerHTML = originalButtonText;
-    }
+            } else {
+                throw new Error(data.message || 'Respuesta inválida del servidor');
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            showMessage('error', 'Hubo un error al enviar el mensaje. Por favor, intenta de nuevo o escríbeme a fcereth@gmail.com');
+        })
+        .finally(() => {
+            // Restaurar botón
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalButtonText;
+
+            // Ocultar mensaje después de 5 segundos
+            setTimeout(() => {
+                hideMessage();
+            }, 5000);
+        });
 }
 
 // Función para validar el formulario

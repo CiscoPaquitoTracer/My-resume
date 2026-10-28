@@ -7,17 +7,19 @@ Portfolio web personal moderno y responsive que muestra mis proyectos, habilidad
 - **Diseño Moderno**: Interfaz limpia y profesional con gradientes y animaciones suaves
 - **Totalmente Responsive**: Optimizado para dispositivos móviles, tablets y escritorio
 - **Navegación Suave**: Scroll suave entre secciones
-- **Formulario de Contacto Funcional**: Sistema de contacto integrado que abre el cliente de correo
+- **Formulario de Contacto Funcional**: Envía el mensaje directamente desde la página (sin abrir otra pestaña)
 - **Galería de Proyectos**: Visualización de proyectos con imágenes y descripciones
 - **Sección de Hobbies**: Muestra intereses personales y pasatiempos
 
 ## 📋 Secciones
 
 1. **Inicio (Hero)**: Presentación principal con botones de acción
-2. **Sobre mí**: Información personal e intereses
-3. **Proyectos**: Portfolio de proyectos desarrollados con tecnologías utilizadas
-4. **Galería**: Imágenes de los proyectos destacados
-5. **Contacto**: Formulario funcional y enlaces a redes sociales
+2. **Sobre mí**: Perfil profesional, tecnologías e intereses
+3. **Experiencia**: Proyectos profesionales y académicos (SIPEI UAEM, Almacén Nova, etc.)
+4. **Educación**: TSU e Ingeniería en la UTEZ
+5. **Proyectos**: Portfolio de proyectos desarrollados con tecnologías utilizadas
+6. **Galería**: Imágenes de los proyectos destacados
+7. **Contacto**: Formulario funcional y enlaces a redes sociales
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -55,24 +57,18 @@ El formulario de contacto está completamente funcional y realiza las siguientes
 1. El usuario completa el formulario
 2. Se validan todos los campos
 3. Si hay errores, se muestran mensajes informativos
-4. Si todo es correcto, se abre el cliente de correo predeterminado con:
-   - Asunto prellenado: "Contacto desde Portfolio - [Nombre]"
-   - Cuerpo del mensaje con toda la información
-   - Email del remitente incluido
+4. Si todo es correcto, el mensaje se envía por AJAX a [FormSubmit](https://formsubmit.co) y llega al correo, sin salir de la página
+5. Se muestra un mensaje de éxito o error
 
 ### Configuración del Email
 
-Para configurar tu email de contacto, edita el archivo `script.js` en la línea 58:
-
-```javascript
-const tuEmail = 'tu-email@gmail.com'; // Cambiar
-```
+El correo de destino está en la constante `FORM_ENDPOINT` de `script.js`. La primera vez que se envía el formulario, FormSubmit manda un correo de activación a esa dirección; hay que confirmarlo para empezar a recibir los mensajes.
 
 ## 🚀 Cómo Usar
 
 1. **Clonar o descargar** el repositorio
 2. **Abrir** `index.html` en tu navegador
-3. **Configurar** tu email en `script.js` (línea 58)
+3. **Configurar** tu email en `script.js` (`FORM_ENDPOINT`)
 4. **Personalizar** el contenido según tus necesidades
 
 ### Servidor Local (Opcional)
