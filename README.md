@@ -4,7 +4,7 @@ Portfolio web personal moderno y responsive que muestra mis proyectos, habilidad
 
 ## 🚀 Características
 
-- **Diseño Moderno**: Interfaz limpia y profesional con paleta azul marino y animaciones suaves
+- **Diseño Moderno**: Interfaz limpia y profesional con paleta negro y rojo y animaciones suaves
 - **Totalmente Responsive**: Optimizado para dispositivos móviles, tablets y escritorio
 - **Navegación Suave**: Scroll suave entre secciones
 - **Formulario de Contacto Funcional**: Envía el mensaje directamente desde la página (sin abrir otra pestaña)
@@ -93,9 +93,9 @@ Los colores principales están definidos en variables CSS en `styles.css`:
 
 ```css
 :root {
-    --primary-color: #6366f1;
-    --secondary-color: #8b5cf6;
-    --accent-color: #ec4899;
+    --primary-color: #dc2626;
+    --secondary-color: #7f1d1d;
+    --accent-color: #f87171;
     /* ... más variables */
 }
 ```
@@ -119,10 +119,15 @@ El sitio está optimizado para:
 
 ## 📝 Proyectos Destacados
 
-1. **Sistema Gestor de Almacén Nova** - Java + MySQL
-2. **Sistema de Gestión de Lockers** - Kotlin + Android Studio
-3. **API para Gestión de Bibliotecas** - Node.js + MySQL
-4. **Competitividad Planes y Programas** - Laravel 12 + PHP
+1. **Gestor Monchosos** - Kotlin + Jetpack Compose + Supabase
+2. **Waymark** (colaboración) - React + Django REST Framework
+3. **Sistema de Inventario y Almacén** (colaboración) - NestJS + Next.js + PostgreSQL
+4. **Skill Route** (colaboración) - Next.js + Stellar
+5. **Sistema Gestor de Almacén Nova** (colaboración) - Java + MySQL
+6. **EcoTrack Meta** - Flutter
+7. **Sistema de Gestión de Lockers** - Kotlin + Android Studio
+8. **Página del 8vo D** (colaboración) - Django
+9. **Misiones** (colaboración) - HTML + CSS + JavaScript
 
 ## 📄 Licencia
 
