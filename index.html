@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Francisco Cereth Alarcon | Desarrollador web</title>
+    <title>Francisco Cereth Alarcón | Desarrollador de Software</title>
+    <meta name="description" content="Portafolio de Francisco Cereth Alarcón, TSU en Desarrollo y Gestión de Software Multiplataforma y estudiante de Ingeniería en la UTEZ.">
     <link href="styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +17,7 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo-container">
-                    <img id="logo" src="./IMG/download.png" alt="Logo personal" class="logo-img">
+                    <a href="#inicio" class="logo-text">Francisco <span>Cereth</span></a>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#inicio" class="nav-link">Inicio</a></li>
@@ -24,7 +25,6 @@
                     <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
                     <li><a href="#educacion" class="nav-link">Educación</a></li>
                     <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-                    <li><a href="#galeria" class="nav-link">Galería</a></li>
                     <li><a href="#contacto" class="nav-link">Contacto</a></li>
                 </ul>
             </div>
@@ -33,12 +33,18 @@
 
     <section id="inicio" class="hero-section">
         <div class="hero-content">
+            <span class="hero-eyebrow">Desarrollo de Software</span>
             <h1 class="hero-title">Francisco Cereth Alarcón</h1>
             <p class="hero-subtitle">Desarrollador de Software Multiplataforma</p>
             <p class="hero-description">TSU en Desarrollo y Gestión de Software Multiplataforma · Estudiante de Ingeniería en la UTEZ</p>
             <div class="hero-buttons">
-                <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                <a href="#experiencia" class="btn btn-primary">Ver experiencia</a>
                 <a href="#contacto" class="btn btn-secondary">Contactar</a>
+            </div>
+            <div class="hero-social">
+                <a href="https://github.com/CiscoPaquitoTracer" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/francisco-cereth-alarcon-581795286/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:fcereth@gmail.com" aria-label="Correo"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </section>
@@ -46,10 +52,7 @@
     
     <section id="sobreMi" class="section">
         <div class="container">
-            <h2 class="section-title">
-                <i class="fas fa-user"></i>
-                Sobre mí
-            </h2>
+            <h2 class="section-title">Sobre mí</h2>
             <div class="about-content">
                 <p class="about-text">Técnico Superior Universitario en Tecnologías de la Información, especializado en el Desarrollo de Software Multiplataforma. Tengo experiencia en documentación de proyectos, gestión de documentos y desarrollo web bajo diversas metodologías. Me destaco por el trabajo en equipo, la organización y la atención a los detalles.</p>
                 <div class="about-details">
@@ -85,36 +88,13 @@
                         <span class="skill-tag">Git</span>
                     </div>
                 </div>
-                <div class="interests-section">
-                    <h3 class="interests-title">
-                        <i class="fas fa-heart"></i>
-                        Hobbies e intereses
-                    </h3>
-                    <div class="interests-grid">
-                        <div class="interest-card">
-                            <i class="fas fa-gamepad"></i>
-                            <p>Jugar videojuegos<br><span class="highlight">Devil May Cry 5</span> es mi favorito</p>
-                        </div>
-                        <div class="interest-card">
-                            <i class="fas fa-film"></i>
-                            <p>Ver películas</p>
-                        </div>
-                        <div class="interest-card">
-                            <i class="fas fa-code"></i>
-                            <p>Aprender nuevas tecnologías</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
     <section id="experiencia" class="section section-dark">
         <div class="container">
-            <h2 class="section-title">
-                <i class="fas fa-briefcase"></i>
-                Experiencia
-            </h2>
+            <h2 class="section-title">Experiencia</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-header">
@@ -158,10 +138,7 @@
 
     <section id="educacion" class="section">
         <div class="container">
-            <h2 class="section-title">
-                <i class="fas fa-graduation-cap"></i>
-                Educación
-            </h2>
+            <h2 class="section-title">Educación</h2>
             <div class="education-grid">
                 <div class="education-card">
                     <span class="education-date">Septiembre 2025 - Actualidad</span>
@@ -180,11 +157,24 @@
 
     <section id="proyectos" class="section section-dark">
         <div class="container">
-            <h2 class="section-title">
-                <i class="fas fa-laptop-code"></i>
-                Proyectos
-            </h2>
+            <h2 class="section-title">Proyectos</h2>
             <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3 class="project-title">Competitividad Planes y Programas</h3>
+                    <p class="project-description">Módulo para sistema de la UAEM de gestión de competitividad, planes y programas.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Laravel 12</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">MVC</span>
+                    </div>
+                    <a href="https://github.com/robertoplruaem/sipei.git" target="_blank" rel="noopener" class="project-link">
+                        <i class="fab fa-github"></i> Ver en GitHub
+                    </a>
+                </div>
+
                 <div class="project-card">
                     <div class="project-icon">
                         <i class="fas fa-warehouse"></i>
@@ -195,7 +185,7 @@
                         <span class="tech-tag">Java</span>
                         <span class="tech-tag">MySQL</span>
                     </div>
-                    <a href="https://github.com/LennyRocha/SGA" target="_blank" class="project-link">
+                    <a href="https://github.com/LennyRocha/SGA" target="_blank" rel="noopener" class="project-link">
                         <i class="fab fa-github"></i> Ver en GitHub
                     </a>
                 </div>
@@ -210,9 +200,9 @@
                         <span class="tech-tag">Kotlin</span>
                         <span class="tech-tag">Android Studio</span>
                     </div>
-                    <a href="#" class="project-link disabled">
-                        <i class="fas fa-clock"></i> Pendiente
-                    </a>
+                    <span class="project-status">
+                        <i class="fas fa-clock"></i> En desarrollo
+                    </span>
                 </div>
 
                 <div class="project-card">
@@ -225,61 +215,9 @@
                         <span class="tech-tag">Node.js</span>
                         <span class="tech-tag">MySQL</span>
                     </div>
-                    <a href="https://github.com/CiscoPaquitoTracer/API_BIBLIOTECA.git" target="_blank" class="project-link">
+                    <a href="https://github.com/CiscoPaquitoTracer/API_BIBLIOTECA.git" target="_blank" rel="noopener" class="project-link">
                         <i class="fab fa-github"></i> Ver en GitHub
                     </a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-clipboard-list"></i>
-                    </div>
-                    <h3 class="project-title">Competitividad Planes y Programas</h3>
-                    <p class="project-description">Módulo para sistema de la UAEM de gestión de competitividad, planes y programas.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Laravel 12</span>
-                        <span class="tech-tag">PHP</span>
-                        <span class="tech-tag">MVC</span>
-                    </div>
-                    <a href="https://github.com/robertoplruaem/sipei.git" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> Ver en GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <section id="galeria" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <i class="fas fa-images"></i>
-                Galería
-            </h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="gallery-image-wrapper">
-                        <img src="./IMG/Almacen.png" alt="Sistema Gestor de Almacén Nova" class="gallery-image">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption">SGANOVA</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-image-wrapper">
-                        <img src="./IMG/lockers.png" alt="Sistema de Gestión de Lockers" class="gallery-image">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption">Gestión de Lockers</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-image-wrapper">
-                        <img src="./IMG/API.png" alt="API Biblioteca" class="gallery-image">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption">API Biblioteca</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -288,20 +226,21 @@
     
     <section id="contacto" class="section section-dark">
         <div class="container">
-            <h2 class="section-title">
-                <i class="fas fa-envelope"></i>
-                Contacto
-            </h2>
+            <h2 class="section-title">Contacto</h2>
             <div class="contact-wrapper">
                 <div class="contact-info">
-                    <h3>¿Tienes alguna pregunta?</h3>
-                    <p>Estoy abierto a nuevas oportunidades y colaboraciones. ¡No dudes en contactarme!</p>
+                    <h3>Hablemos</h3>
+                    <p>Estoy abierto a oportunidades como becario, prácticas profesionales y colaboraciones en proyectos de desarrollo de software. Escríbeme y te responderé a la brevedad.</p>
                     <div class="social-links">
-                        <a href="https://github.com/CiscoPaquitoTracer" target="_blank" class="social-link">
+                        <a href="mailto:fcereth@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>fcereth@gmail.com</span>
+                        </a>
+                        <a href="https://github.com/CiscoPaquitoTracer" target="_blank" rel="noopener" class="social-link">
                             <i class="fab fa-github"></i>
                             <span>GitHub</span>
                         </a>
-                        <a href="https://www.linkedin.com/in/francisco-cereth-alarcon-581795286/" target="_blank" class="social-link">
+                        <a href="https://www.linkedin.com/in/francisco-cereth-alarcon-581795286/" target="_blank" rel="noopener" class="social-link">
                             <i class="fab fa-linkedin"></i>
                             <span>LinkedIn</span>
                         </a>
@@ -341,10 +280,10 @@
         <div class="container">
             <p>&copy; 2026 Francisco Cereth Alarcon. Todos los derechos reservados.</p>
             <div class="footer-links">
-                <a href="https://github.com/CiscoPaquitoTracer" target="_blank" class="footer-link">
+                <a href="https://github.com/CiscoPaquitoTracer" target="_blank" rel="noopener" class="footer-link">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/francisco-cereth-alarcon-581795286/" target="_blank" class="footer-link">
+                <a href="https://www.linkedin.com/in/francisco-cereth-alarcon-581795286/" target="_blank" rel="noopener" class="footer-link">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </div>

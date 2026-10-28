@@ -4,22 +4,20 @@ Portfolio web personal moderno y responsive que muestra mis proyectos, habilidad
 
 ## 🚀 Características
 
-- **Diseño Moderno**: Interfaz limpia y profesional con gradientes y animaciones suaves
+- **Diseño Moderno**: Interfaz limpia y profesional con paleta azul marino y animaciones suaves
 - **Totalmente Responsive**: Optimizado para dispositivos móviles, tablets y escritorio
 - **Navegación Suave**: Scroll suave entre secciones
 - **Formulario de Contacto Funcional**: Envía el mensaje directamente desde la página (sin abrir otra pestaña)
-- **Galería de Proyectos**: Visualización de proyectos con imágenes y descripciones
-- **Sección de Hobbies**: Muestra intereses personales y pasatiempos
+- **Experiencia y Educación**: Trayectoria profesional y académica basada en el CV
 
 ## 📋 Secciones
 
 1. **Inicio (Hero)**: Presentación principal con botones de acción
-2. **Sobre mí**: Perfil profesional, tecnologías e intereses
+2. **Sobre mí**: Perfil profesional, datos de contacto y tecnologías
 3. **Experiencia**: Proyectos profesionales y académicos (SIPEI UAEM, Almacén Nova, etc.)
 4. **Educación**: TSU e Ingeniería en la UTEZ
 5. **Proyectos**: Portfolio de proyectos desarrollados con tecnologías utilizadas
-6. **Galería**: Imágenes de los proyectos destacados
-7. **Contacto**: Formulario funcional y enlaces a redes sociales
+6. **Contacto**: Formulario funcional y enlaces a redes sociales
 
 ## 🛠️ Tecnologías Utilizadas
 
